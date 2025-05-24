@@ -8,7 +8,7 @@ Professor André Kishimoto
 
 Bruno E. A. Hayek - R.A: 10389776
 
-Gustavo Cunha Ciola - R.A:
+Gustavo Cunha Ciola - R.A: 10402397
 
 Caio Alexandre V. B. de Andrade - RA: 10298313
 

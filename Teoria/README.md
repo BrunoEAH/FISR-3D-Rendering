@@ -1,4 +1,4 @@
-Exploração do algoritmo Fast Inverse Square Root em renderizações 3D - Aplicação e Prática
+## Exploração do algoritmo Fast Inverse Square Root em renderizações 3D - Aplicação e Prática
 
 Computação Visual - Projeto N2
 

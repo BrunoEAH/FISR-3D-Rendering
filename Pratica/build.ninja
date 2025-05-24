@@ -1,0 +1,39 @@
+ninja_required_version = 1.5
+
+# Compiler definitions
+cc_linux = g++
+cc_win = x86_64-w64-mingw32-g++
+
+# Directory definitions
+builddir = build
+srcdir = src
+imguidir = third_party/imgui
+
+
+# Linux flags
+cflags_linux = -Wall -s -march=native -std=c++20 -I${imguidir} -I${imguidir}/backends
+libs_linux   = `sdl2-config --cflags` `pkg-config --cflags --libs glu SDL2_ttf` `sdl2-config --libs`
+
+# Windows flags (MinGW cross-compiler)
+cflags_win = -Wall -s -march=native -std=c++20 -I/usr/x86_64-w64-mingw32/include/SDL2 -I/usr/x86_64-w64-mingw32/include/SDL2_ttf -I${imguidir} -I${imguidir}/backends
+
+libs_win = -lmingw32 -lSDL2main -lSDL2 -lSDL2_ttf -lopengl32 -lglu32
+
+# Linux build rule
+rule cc_linux
+  command = sh -c "$cc_linux $cflags_linux $in $libs_linux -o $out"
+  description = Building Linux executable $out
+
+# Windows build rule
+rule cc_win
+  command = $cc_win $cflags_win $in $libs_win -o $out
+  description = Building Windows executable $out
+
+# Targets
+build $builddir/quake: cc_linux $srcdir/Quake.cpp $srcdir/World.cpp $srcdir/Map.cpp $srcdir/Camera.cpp ${imguidir}/imgui.cpp ${imguidir}/imgui_draw.cpp ${imguidir}/imgui_widgets.cpp ${imguidir}/imgui_tables.cpp ${imguidir}/backends/imgui_impl_sdl2.cpp ${imguidir}/backends/imgui_impl_opengl3.cpp
+
+build $builddir/quake.exe: cc_win $srcdir/Quake.cpp $srcdir/World.cpp $srcdir/Map.cpp $srcdir/Camera.cpp ${imguidir}/imgui.cpp ${imguidir}/imgui_draw.cpp ${imguidir}/imgui_widgets.cpp ${imguidir}/imgui_tables.cpp ${imguidir}/backends/imgui_impl_sdl2.h ${imguidir}/backends/imgui_impl_sdl2.cpp ${imguidir}/backends/imgui_impl_opengl3.cpp ${imguidir}/backends/imgui_impl_opengl3.h
+
+# Phony targets
+build quake: phony $builddir/quake
+build quake.exe: phony $builddir/quake.exe

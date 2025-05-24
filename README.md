@@ -1,6 +1,9 @@
-# Exploração do algoritmo Fast Inverse Square Root em renderizações 3D
+## Exploração do algoritmo Fast Inverse Square Root em renderizações 3D
+
+#Computação Visual - Projeto N2
 
 **Professor:** Prof. André Kishimoto
+
 **Alunos:**  
 - Bruno E. A. Hayek - R.A: 10389776  
 - Gustavo Cunha Ciola - R.A: 10402397

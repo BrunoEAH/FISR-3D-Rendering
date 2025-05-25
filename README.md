@@ -1,6 +1,6 @@
 # Exploração do algoritmo Fast Inverse Square Root em renderizações 3D
 
-#Computação Visual - Projeto N2
+## Computação Visual - Projeto N2
 
 **Professor:** Prof. André Kishimoto
 

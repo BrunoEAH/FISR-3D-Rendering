@@ -5,9 +5,9 @@ Um visualizador simples de mapas do Quake em OpenGL, originalmente criado por Jo
 O principal objetivo deste fork é renderizar o visualizador de mapas do Quake utilizando o Fast Inverse Square Root, um método de cálculo tradicional ou uma aproximação por série de Taylor. Mais detalhes estão disponíveis no seguinte repositório: [https://github.com/BrunoEAH/FISR-3D-Rendering](https://github.com/BrunoEAH/FISR-3D-Rendering). Também aprimoramos o arquivo de build para que ele gere um executável para Windows. Por fim, adaptamos o código para C++20 e adicionamos uma janela para visualizar o benchmark de cada método de cálculo.
 
 
-![Screenshot](/screenshots/quake.png "quake")
+![Screenshot](screenshots/quake.png "quake")
 
-![GIF](/screenshots/lv_0_20250524193135.gif "quake")
+![GIF](screenshots/lv_0_20250524193135.gif "quake")
 
 
 ## Pré-requisitos

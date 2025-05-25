@@ -32,11 +32,8 @@ A pasta `Pratica` contém o código fonte do mapa do Quake OpenGL com implementa
 
 ## Funcionamento 
 
-<video width="640" height="360" controls>
-  <source src="imagens/lv_0_20250524192811.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+Vídeo com o funcionamento: https://youtu.be/7gSsM4fr6GQ
 
-![Screenshot](/screenshots/quake.png "quake")
+![Screenshot](imagens/quake.png "quake")
 
-![GIF](/screenshots/lv_0_20250524193135.gif "quake")
+![GIF](imagens/lv_0_20250524193135.gif "quake")

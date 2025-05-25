@@ -1,0 +1,8 @@
+Membros:
+Caio Alexandre V.B. de Andrade - 10298313
+Bruno Elie Albanese Hayek - 10389776
+Nicolas Fernandes Melnik - 10402170
+Gustavo Cunha Ciola - 10402397
+
+Link GitHub:
+https://github.com/BrunoEAH/opengl-quake-FISR-Experiment/tree/master

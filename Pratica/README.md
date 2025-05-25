@@ -4,9 +4,14 @@ A simple Quake map viewer in OpenGL originally made by Johan Gardhage and furthe
 
 The main goal for this fork is to render the Quake map viewer using the Fast Inverse Square Root, a traditional calculation method or a Taylor series approximation. More details are give in the following repository: https://github.com/BrunoEAH/FISR-3D-Rendering. We have further improved the building file so that it also generates a executable for Windows. In the end, we adapted the code to C++20 and also added a window to see the benchmark for each calculation method.
 
-![Screenshot](/screenshots/quake.png "quake")
+Github com o nosso fork:
+https://github.com/BrunoEAH/opengl-quake-FISR-Experiment
 
-![GIF](/screenshots/lv_0_20250524193135.gif "quake")
+
+
+![Screenshot](screenshots/quake.png "quake")
+
+![GIF](screenshots/lv_0_20250524193135.gif "quake")
 
 
 ## Prerequisites

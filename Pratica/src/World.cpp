@@ -370,7 +370,7 @@ float World::Q_rsqrt(float number) {
     i = 0x5f3759dfu - (i >> 1);                     // “magic constant”
     std::memcpy(&y, &i, sizeof(y));                // uint32_t → float
 
-    y = y * (threehalfs - (x2 * y * y));           // Newton–Raphson step 
+    y = y * (threehalfs - (x2 * y * y));           // passo do Newton–Raphson 
     return y;
 
 }
@@ -394,7 +394,7 @@ float World::CalculateDistance(vec3_t a, vec3_t b){
 
 	}
 
-	//Traditional method : using 1/sqrt()
+	//Método tradicional 1/sqrt()
 	else if (useTraditional){
 		auto start = std::chrono::high_resolution_clock::now();
 		invLen = 1.0f / std::sqrt(len2);
@@ -416,7 +416,7 @@ float World::CalculateDistance(vec3_t a, vec3_t b){
 	
 	}
 
-    // normalize a
+    // normaliza a
     vec3_t na = { a[0]*invLen, a[1]*invLen, a[2]*invLen };
     // dot(normalized a, b)
     return na[0]*b[0] + na[1]*b[1] + na[2]*b[2];

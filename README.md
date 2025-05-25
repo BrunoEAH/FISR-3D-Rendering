@@ -1,4 +1,4 @@
-## Exploração do algoritmo Fast Inverse Square Root em renderizações 3D
+# Exploração do algoritmo Fast Inverse Square Root em renderizações 3D
 
 #Computação Visual - Projeto N2
 
@@ -28,3 +28,15 @@ A pasta `Pratica` contém o código fonte do mapa do Quake OpenGL com implementa
 
 1. Certifique-se de ter o SDL2, OpenGL e GLU instalados instalados.
 2. Para compilar o projeto, basta usar:  `$ ninja`
+
+
+## Funcionamento 
+
+<video width="640" height="360" controls>
+  <source src="imagens/lv_0_20250524192811.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+![Screenshot](/screenshots/quake.png "quake")
+
+![GIF](/screenshots/lv_0_20250524193135.gif "quake")

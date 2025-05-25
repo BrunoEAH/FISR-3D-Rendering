@@ -54,6 +54,21 @@ Press F to turn on the FISR algorithm
 Press T to turn on the traditional algorithm
 ```
 
+## Sobre o código
+
+Implementamos três métodos em World.cpp que podem ser utilizadas no cálculo da inversa de uma raiz quadrada:
+
+World::Q_rsqrt -> Algoritmo FISR
+World::very_slow_rsqrt -> Algoritmo usando aproximação por série de Taylor
+1.0f / std::sqrt(x) -> Método tradicional
+
+Esses métodos são chamados na função World::CalculateDistance(vec3_t a, vec3_t b), que calcula o produto escalar de dois vetores que serão normalizados. Nela há implementação de linhas que nos auxiliam a medir o benchmark, o qual é dado pelo cálculo do vetor por microsegundos. 
+
+O tempo é calculado usando std::chrono::high_resolution_clock::now() , depois computa-se o valor em microsegundos com std::chrono::duration<float, micro>(end - start).count(); e é feita uma "suavização" do tempo, para deixar o benchmark mais estável.
+
+Posteriormente, na função main de Quake.cpp cria-se uma janela utilizanda a interface gráfica para C++ ImGUI, em que será mostrado os dados de benchmark,
+com o respectivo tipo de algoritmo usado para o cálculo e o tempo em micro segundos.
+
 ## License
 
 Licensed under MIT license. See [LICENSE](LICENSE) for more information.
